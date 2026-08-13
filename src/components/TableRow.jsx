@@ -1,33 +1,41 @@
-import React from "react";
-import Button from "./Button";
+import React from 'react'
+import Button from './Button'
 
-function TableRow({ user, handleDelete }) {
-  return (
-    <tr key={user.id} className="border-b border-gray-200">
-      <td className="px-4 py-3 text-sm text-gray-700">
-        <img
-          src={user.avatar}
-          alt={user.firstName}
-          className="w-10 h-10 rounded-full"
-        />
-      </td>
-      <td className="px-4 py-3 text-sm text-gray-700">{user.firstName}</td>
-      <td className="px-4 py-3 text-sm text-gray-700">{user.lastName}</td>
-      <td className="px-4 py-3 text-sm text-gray-700">{user.age}</td>
-      <td className="px-4 py-3 text-sm text-gray-700">{user.email}</td>
-      <td className="px-4 py-3 text-sm text-gray-700">{user.phone}</td>
-      <td className="px-4 py-3 text-sm text-gray-700">{user.city}</td>
-      <td className="px-4 py-3 text-sm text-gray-700">{user.profession}</td>
-      <td className="px-4 py-3 gap-2 text-center flex items-center justify-between">
-        <Button variant={"edit"} text="edit" />
-        <Button
-          onClick={() => handleDelete(user.id)}
-          variant={"delete"}
-          text={"delete"}
-        />
-      </td>
-    </tr>
-  );
+function TableRow({ user, handleDelete, handleEdit }) {
+	return (
+		<tr className='border-b border-border last:border-b-0 hover:bg-slate-50/80 transition-colors'>
+			<td className='px-4 py-3'>
+				<img
+					src={user.avatar}
+					alt={user.firstName}
+					className='h-9 w-9 rounded-full border border-border object-cover'
+				/>
+			</td>
+			<td className='px-4 py-3 text-sm font-medium text-text'>
+				{user.firstName}
+			</td>
+			<td className='px-4 py-3 text-sm text-text'>{user.lastName}</td>
+			<td className='px-4 py-3 text-sm text-text-dim'>{user.age}</td>
+			<td className='px-4 py-3 text-sm text-text-dim'>{user.email}</td>
+			<td className='px-4 py-3 text-sm text-text-dim'>{user.phone}</td>
+			<td className='px-4 py-3 text-sm text-text-dim'>{user.city}</td>
+			<td className='px-4 py-3'>
+				<span className='rounded-md bg-accent-soft px-2.5 py-1 text-xs font-medium text-accent'>
+					{user.profession}
+				</span>
+			</td>
+			<td className='px-4 py-3'>
+				<div className='flex items-center justify-center gap-2'>
+					<Button onClick={() => handleEdit(user)} variant='edit' text='Edit' />
+					<Button
+						onClick={() => handleDelete(user.id)}
+						variant='delete'
+						text='Delete'
+					/>
+				</div>
+			</td>
+		</tr>
+	)
 }
 
-export default TableRow;
+export default TableRow
