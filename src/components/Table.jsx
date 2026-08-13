@@ -82,7 +82,7 @@ function Table() {
 						/>
 					</div>
 					<Button
-						text='+ Yangi xodim'
+						text='Add'
 						variant='secondary'
 						onClick={handleAdd}
 					/>

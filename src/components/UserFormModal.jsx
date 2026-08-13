@@ -11,14 +11,14 @@ const validationSchema = Yup.object({
 		.min(2, 'Kamida 2 ta harf')
 		.required('Familiya majburiy'),
 	age: Yup.number()
-		.typeError('Raqam kiriting')
+		.typeError('Telefon raqam kiritasz')
 		.min(1)
 		.max(100)
-		.required('Yosh majburiy'),
-	email: Yup.string().email("Email noto'g'ri").required('Email majburiy'),
-	phone: Yup.string().min(9, "Telefon noto'g'ri").required('Telefon majburiy'),
-	city: Yup.string().required('Shahar majburiy'),
-	profession: Yup.string().required('Kasb majburiy'),
+		.required('Yoshingizni kiritasz'),
+	email: Yup.string().email("Email notori").required('Email kiritas'),
+	phone: Yup.string().min(9, "Telefon noto'g'ri").required('Telefon kiritasz'),
+	city: Yup.string().required('Shaharingizni kiritasz'),
+	profession: Yup.string().required('Kasbingizni kiritasz'),
 })
 
 function UserFormModal({ isOpen, onClose, user }) {
@@ -78,7 +78,7 @@ function UserFormModal({ isOpen, onClose, user }) {
 			>
 				<div className='mb-6 flex items-start justify-between'>
 					<h2 className='font-display text-lg font-bold text-text'>
-						{isEditMode ? 'Xodimni tahrirlash' : "Yangi xodim qo'shish"}
+						{isEditMode ? 'Xodimni tahrirlash' : "Yangi xodim qoshish"}
 					</h2>
 					<button
 						onClick={onClose}
@@ -120,7 +120,7 @@ function UserFormModal({ isOpen, onClose, user }) {
 						<Button
 							type='submit'
 							variant='secondary'
-							text={isEditMode ? 'Saqlash' : "Qo'shish"}
+							text={isEditMode ? 'Saqlash' : "Qoshish"}
 						/>
 					</div>
 				</form>
@@ -130,4 +130,3 @@ function UserFormModal({ isOpen, onClose, user }) {
 }
 
 export default UserFormModal
-	
