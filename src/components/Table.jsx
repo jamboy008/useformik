@@ -50,11 +50,11 @@ function Table() {
 				<div className='mb-8 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between'>
 					<div>
 						<h1 className='font-display text-2xl font-bold text-text'>
-							Xodimlar bazasi
+							Xodimlar ro'yhati
 						</h1>
-						<p className='mt-1 text-sm text-text-dim'>
+						{/* <p className='mt-1 text-sm text-text-dim'>
 							Jami {data.length} ta xodim ro'yxatga olingan
-						</p>
+						</p> */}
 					</div>
 				</div>
 
