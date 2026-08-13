@@ -50,7 +50,7 @@ function Table() {
 				<div className='mb-8 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between'>
 					<div>
 						<h1 className='font-display text-2xl font-bold text-text'>
-							Xodimlar ro'yhati
+							Xodimlar royhati
 						</h1>
 						{/* <p className='mt-1 text-sm text-text-dim'>
 							Jami {data.length} ta xodim ro'yxatga olingan
@@ -77,7 +77,7 @@ function Table() {
 							type='text'
 							value={search}
 							onChange={e => setSearch(e.target.value)}
-							placeholder="Ism, shahar yoki kasb bo'yicha qidirish..."
+							placeholder="Qidirish"
 							className='w-full rounded-lg border border-border bg-surface py-2.5 pl-9 pr-3.5 text-sm text-text placeholder:text-text-dim outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/15'
 						/>
 					</div>
